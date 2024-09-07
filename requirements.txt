@@ -1,0 +1,17 @@
+shiny
+openai
+python-dotenv
+pytz
+langchain
+langchain-openai
+unstructured-client
+tiktoken
+sentence-transformers
+faiss-cpu
+numpy
+pickle-mixin
+pandas
+openpyxl
+chardet
+aiohttp
+tqdm
