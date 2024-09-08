@@ -52,7 +52,7 @@ styles_app = ui.page_fluid(
         }
         .bslib-sidebar-layout>.sidebar {
             border-right: 0;
-            backdrop-filter: blur(3px);
+            backdrop-filter: blur(2px);
             background: rgba(255, 255, 255, 0.07);
         }
         .bslib-sidebar-layout>.sidebar>.sidebar-content {
@@ -75,6 +75,9 @@ styles_app = ui.page_fluid(
         .checkbox label input {
             cursor: pointer;         
         }
+        .bslib-sidebar-layout>.sidebar>.sidebar-content>.accordion:not(:last-child) .accordion-item:last-child {
+            border: none !important;
+        }
         .accordion-body {
             padding: 8px 20px 0;
         }
@@ -84,7 +87,7 @@ styles_app = ui.page_fluid(
             overflow-y: auto;
         }
         .sidebar::-webkit-scrollbar {
-            width: 10px;
+            width: 18px;
         }
         .sidebar::-webkit-scrollbar-track {
             background: #1E0F3C; // Deep purple
@@ -181,11 +184,15 @@ styles_app = ui.page_fluid(
             color: red;
             font-weight: bold;
         }
-        
-        /* Add this new style for the download button */
         #download_chat {
             margin-top: 10px;
             margin-bottom: 20px;
+        }
+        .instructions-output>h3 {
+            font-weight: bold;
+            font-size: 58px;
+            color: #FFF;
+            -webkit-text-stroke: 3px #8A64FF;
         }
     """)
 )

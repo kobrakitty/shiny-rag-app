@@ -5,6 +5,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 from datetime import datetime
 import pytz
+from layout import layout_app
 from styles import styles_app
 from langchain_openai import ChatOpenAI
 from langchain.chains import LLMChain
@@ -145,8 +146,8 @@ async def summarize_document(content: str, openai_api_key: str, max_tokens: int 
     summaries = []
 
     try:
-        chat = ChatOpenAI(api_key=openai_api_key, model_name="gpt-3.5-turbo", temperature=0, max_tokens=500)
-        current_model = "gpt-3.5-turbo"
+        chat = ChatOpenAI(api_key=openai_api_key, model_name="gpt-4o-mini", temperature=0, max_tokens=500)
+        current_model = "gpt-4o-mini"
     except Exception as e:
         logging.error(f"Error with OpenAI API key: {str(e)}.")
         return f"Error with OpenAI API key: {str(e)}", "Error"
@@ -174,55 +175,6 @@ async def summarize_document(content: str, openai_api_key: str, max_tokens: int 
         logging.error(f"Error creating final summary: {str(e)}")
         return f"Error creating final summary: {str(e)}", current_model
     
-    # Define the UI for the Shiny app
-app_ui = ui.page_fluid(
-    ui.tags.style(styles_app),
-    ui.output_image("background"),
-    ui.page_sidebar(
-        ui.sidebar(
-            ui.h2("File Upload", style="color: #0E4878;"),
-            ui.input_file("file_upload", "Upload a file by clicking Browse below", multiple=True),
-            ui.output_text_verbatim("file_info"),
-            ui.accordion(
-                ui.accordion_panel(
-                    ui.markdown("### Uploaded files:"),
-                    ui.output_ui("uploaded_files_list"),
-                )
-            ),
-            ui.input_action_button("process_button", "Process Selected Files", class_="btn-primary mt-2 PSDbtn"),
-            ui.input_action_button("summarize_button", "Summarize Selected Files", class_="btn-primary mt-2 PSDbtn"),
-            ui.input_action_button("delete_button", "Delete Selected Files", class_="btn-danger mt-2 PSDbtn"),
-            ui.div(
-                ui.input_text_area("user_question", "Ask a question about the file(s):"),
-                class_="mt-3"
-            ),
-            ui.input_text("openai_api_key", "Enter OpenAI API Key:", placeholder="sk-..."),
-            ui.input_action_button("submit_question", "Submit Question", class_="btn-primary mt-2"),
-        open="open"),
-        ui.div({"class": "logoWelcome"}, 
-            ui.output_image("TSJ", inline=True),
-            ui.div({"class": "time-display-column"},
-                ui.output_text("time_display"),
-                ui.h1({"class": "greeting"}, "Welcome!"),
-                ),
-            ),
-        ui.div(            
-            ui.h3("Instructions:"),
-            ui.tags.ul(
-                ui.tags.li("In the sidebar to the left, click 'Browse' to select your files."),
-                ui.tags.li("Click 'Process Selected Files' to initiate processing."), 
-                ui.tags.li("Enter your OpenAI API key to use GPT-3.5-Turbo for summarization and answering questions."),
-                ui.tags.li("Select files and click 'Summarize Selected Files' or 'Submit Question.'"),
-                ui.tags.li("Output will be displayed below."),
-            ),
-            ui.h3("Output:", class_="section-header"),
-            ui.output_text_verbatim("process_output"),
-            ui.download_button("download_chat", "Download Chat", class_="btn-primary mt-2"),
-        ),
-        ui.output_text_verbatim("api_key_info"),
-        ui.output_text_verbatim("progress_output"),
-    )
-)
 
 # Define the server logic for the Shiny app
 def server(input, output, session):
@@ -232,19 +184,19 @@ def server(input, output, session):
     process_output_value = reactive.Value("")
     progress_output_value = reactive.Value("")
     conversation_history = reactive.Value([])
-    current_model = reactive.Value("gpt-3.5-turbo")
+    current_model = reactive.Value("gpt-4o-mini")
 
     @render.image  
-    def TSJ_logo():
+    def TSJ():
         return {
-            "src": str(here / "TSJ.png"),
+            "src": "www/TSJ.png",
             "style": """
+                width: 200px;
+                height: auto;
+                z-index: 1000;
                 position: fixed;
                 bottom: 20px;
                 right: 20px;
-                width: 100px;
-                height: auto;
-                z-index: 1000;
             """
         }
     
@@ -475,8 +427,8 @@ def server(input, output, session):
             
             openai_api_key = input.openai_api_key() or os.getenv("OPENAI_API_KEY")
             
-            chat = ChatOpenAI(api_key=openai_api_key, model_name="gpt-3.5-turbo", temperature=0, max_tokens=300)
-            current_model.set("gpt-3.5-turbo")
+            chat = ChatOpenAI(api_key=openai_api_key, model_name="gpt-4o-mini", temperature=0, max_tokens=300)
+            current_model.set("gpt-4o-mini")
             
             prompt = PromptTemplate(
                 input_variables=["context", "question"],
@@ -510,6 +462,13 @@ def server(input, output, session):
                 shutil.move(file_path, save_path)
             file_list.set(os.listdir('uploaded_files'))
 
+# Define the UI for the Shiny app
+app_ui = ui.page_fluid(
+    layout_app,
+    ui.tags.style(styles_app),
+    # The class_="p-0" is used to block out the extra padding on the sides of the page_liquid
+    class_="p-0"
+)
 # Create and run the app
 app = App(app_ui, server)
 
