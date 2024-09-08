@@ -1,7 +1,9 @@
 from shiny import ui
+from styles import styles_app
 
-layout_app = ui.page_fluid(
+layout_home = ui.page_fluid(
     ui.output_image("background"),
+    ui.tags.style(styles_app),
     ui.page_sidebar(
         ui.sidebar(
             ui.h2("File Upload", style="color: #0E4878;"),
@@ -50,5 +52,6 @@ layout_app = ui.page_fluid(
         ui.output_text_verbatim("progress_output"),
     ),
     # Used to block out the extra padding on the sides of the page_liquid
-    class_="p-0"
+    class_="p-0",
 )
+
