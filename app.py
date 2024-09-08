@@ -5,8 +5,8 @@ from openai import OpenAI
 from dotenv import load_dotenv
 from datetime import datetime
 import pytz
-from layout import layout_app
-from styles import styles_app
+from home import layout_home
+from about import layout_about
 from langchain_openai import ChatOpenAI
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
@@ -185,6 +185,7 @@ def server(input, output, session):
     progress_output_value = reactive.Value("")
     conversation_history = reactive.Value([])
     current_model = reactive.Value("gpt-4o-mini")
+    pass
 
     @render.image  
     def TSJ():
@@ -209,7 +210,7 @@ def server(input, output, session):
     
     @render.image  
     def background():
-        return {"src": "www/cloud.png", "style": "width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: -1;"}
+        return {"src": "www/cloud.png", "style": "width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: -101;"}
 
     @reactive.Effect
     def _():
@@ -462,12 +463,12 @@ def server(input, output, session):
                 shutil.move(file_path, save_path)
             file_list.set(os.listdir('uploaded_files'))
 
-# Define the UI for the Shiny app
-app_ui = ui.page_fluid(
-    layout_app,
-    ui.tags.style(styles_app),
-    # The class_="p-0" is used to block out the extra padding on the sides of the page_liquid
-    class_="p-0"
+app_ui = ui.page_navbar(  
+    ui.nav_panel("Home", layout_home),
+    ui.nav_panel("About", layout_about),
+    # Not sure why but I had trouble displaying a third page if I wanted to add one.
+    title="RAG AI Internal Search Engine",
+    id="page"
 )
 # Create and run the app
 app = App(app_ui, server)

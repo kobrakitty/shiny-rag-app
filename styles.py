@@ -3,13 +3,17 @@ from shiny import ui
 styles_app = ui.page_fluid(
     ui.tags.style("""
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
+        
         body, button, input, select, textarea {
             font-family: 'Fredoka One', cursive;
             font-weight: 600;
             font-size: 1.1em;
             color: #FF61D8;
             text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+                  
+        :root {
+            --navbar-height: 60px;
         }
 
         h1, h2, h3, h4, h5, li {
@@ -22,19 +26,18 @@ styles_app = ui.page_fluid(
         }
 
         html {
-            overflow: hidden !important;
+            # overflow: hidden !important;
         }
         body {
-            overflow: hidden !important;
+            # overflow: hidden !important;
             height: fit-content; #makes sure the background image isn't cut off
         }
-        .row {
-          overflow-x: hidden;
-          --bs-gutter-x: 0;
+        .main, .tab-pane {
+            overflow: hidden !important;
         }
         #background img {
             object-fit: contain !important;
-            overflow: hidden !important;
+            # overflow: hidden !important;
             width: 100vw !important;
             height: auto !important;
         }
@@ -42,15 +45,13 @@ styles_app = ui.page_fluid(
             position: absolute;
             top: 0;
             left: 0;
+            z-index: -101;
         }
         .bslib-sidebar-layout {
             --_sidebar-width: 25vw !important; /* Override the sidebar width to 1/4 of the screen */
-            background-image: url('www/background1.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
         }
         .bslib-sidebar-layout>.sidebar {
+            height: calc(100vh - var(--navbar-height)) !important;
             border-right: 0;
             backdrop-filter: blur(2px);
             background: rgba(255, 255, 255, 0.07);
@@ -84,7 +85,6 @@ styles_app = ui.page_fluid(
         .sidebar {
             height: 100vh;
             box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-            overflow-y: auto;
         }
         .sidebar::-webkit-scrollbar {
             width: 18px;
@@ -136,9 +136,9 @@ styles_app = ui.page_fluid(
         .mt-3 {
             margin-top: 1rem;
         }
-        .sidebar .form-check-label {
-            color: #4E4E4E;
-        }
+        # .sidebar .form-check-label {
+        #     color: #4E4E4E;
+        # }
         .logoWelcome {
             display: flex;
             justify-content: space-between;
@@ -194,5 +194,41 @@ styles_app = ui.page_fluid(
             color: #FFF;
             -webkit-text-stroke: 3px #8A64FF;
         }
+        #process_output {
+            max-height: 400px;
+        }
+        # Styles added to cooperate with the BSLib library when navbar was added
+        :root {
+            --bslib-spager: 0 !important;
+            --bs-gutter-x: 0 !important;
+        }          
+        
+        .bslib-page-navbar>.navbar {
+            height: var(--navbar-height) !important;
+            z-index: 10;
+        }
+        .bslib-page-navbar>.container-fluid {
+            --bs-gutter-x: 0 !important;
+            --bs-gutter-y: 0;
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+
+        .navbar:not(.fixed-bottom):not(.navbar-fixed-bottom):not(.navbar-fixed-bottom)+div>.tab-content>.tab-pane {
+            padding-top: 0;
+            margin-top: 0;
+            --bslib-navbar-margin: 0 !important;
+        }
+
+        .bslib-page-navbar>.navbar+div, .bslib-page-dashboard>.navbar+div {
+            border-top: none;
+        }
+        
+                  
+
+
+
+
+
     """)
 )
