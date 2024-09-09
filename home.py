@@ -51,6 +51,19 @@ layout_home = ui.page_fluid(
         ui.output_text_verbatim("api_key_info"),
         ui.output_text_verbatim("progress_output"),
     ),
+    ui.tags.footer(
+        ui.div(
+            ui.div(
+                ui.a(
+                    ui.output_image("github", inline=True),
+                    href="https://github.com/kobrakitty/shiny-rag-app",
+                    target="_blank"
+                ),
+            ),
+            ui.p("©2024 All rights reserved.", style="margin-left: 10px; display: inline-block; font-size: large;"),
+            style="text-align: center; padding: 20px; position: absolute; width: 100%;"
+        )
+    ),
     # Used to block out the extra padding on the sides of the page_liquid
     class_="p-0",
 )
