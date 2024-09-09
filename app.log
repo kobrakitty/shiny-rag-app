@@ -444,3 +444,6 @@ memory usage: 1.1+ KB
 Student (object)
 Math_Grade (int64)
 Physics_Grade (int64)
+2024-09-09 13:30:10,460 - unstructured-client - INFO - Preparing to split document for partition.
+2024-09-09 13:30:10,460 - unstructured-client - INFO - Given file doesn't have '.pdf' extension, so splitting is not enabled.
+2024-09-09 13:30:10,460 - unstructured-client - INFO - Partitioning without split.
