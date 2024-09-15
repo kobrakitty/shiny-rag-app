@@ -220,7 +220,7 @@ def server(input, output, session):
     def github():
         return {"src": "www/github-mark.png", "style": "text-align: center; width: 35px; height: 35px;"}
     
-    @session.download(filename="chat_output.txt")
+    @render.download(filename="chat_output.txt")
     def download_chat():
         def generate_content():
             yield process_output_value()

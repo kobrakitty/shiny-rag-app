@@ -53,16 +53,14 @@ layout_home = ui.page_fluid(
     ),
     ui.tags.footer(
         ui.div(
-            ui.div(
-                ui.a(
-                    ui.output_image("github", inline=True),
-                    href="https://github.com/kobrakitty/shiny-rag-app",
-                    target="_blank"
-                ),
+            ui.a(
+                ui.output_image("github", inline=True),
+                href="https://github.com/kobrakitty/shiny-rag-app",
+                target="_blank"
             ),
-            ui.p("©2024 All rights reserved.", style="margin-left: 10px; display: inline-block; font-size: large;"),
-            style="text-align: center; padding: 20px; position: absolute; width: 100%;"
-        )
+        ),
+        ui.p("©2024 All rights reserved.", style="margin-left: 10px; display: inline-block; font-size: large;"),
+        style="text-align: center; position: absolute; width: 100%; backdrop-filter: blur(1px); background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.07)); border-top: 1px solid #F0F0F0c4; padding-top: 1rem;"
     ),
     # Used to block out the extra padding on the sides of the page_liquid
     class_="p-0",
