@@ -224,7 +224,9 @@ styles_app = ui.page_fluid(
             border-top: none;
         }
         
-                  
+        .bslib-mb-spacing {
+            margin-bottom: 0 !important;
+        }          
 
 
 
