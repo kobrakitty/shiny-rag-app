@@ -27,7 +27,7 @@ To install and use this application, Python and Visual Studio Build Tools must b
 
 To run this application from the terminal, enter "shiny run app.py" to start the server. The message "Uvicorn running on http://127.0.0.1:8000" will display within the console. Click the link to open up the application in the browser. Once the application is loaded, a homepage will be displayed welcoming the user containing a collapsable side pannel, a drop down menu, and an output area near the center.
 
-In the side pannel to the left, click "Browse" to upload your files or drag and drop them into the "Browse" area. Accepted file types are txt, doc, docx, pdf, xlsx, csv, and pptx. Select all or any number of uploaded files. Click "Process Selected Files" to initiate processing. This will extract content, chunk it, and add embeddings to FAISS index. Enter your OpenAI API key to use GPT-3.5-Turbo for summarization and answering questions. Select files and click "Summarize Selected Files" or "Submit Question." "Summarize Selected Files" will summarize the following content in a concise manner, capturing the main points and key information. "Submit Question" will answer the question based on the given context, report exact numbers or percentages if they are present in the context, and indicate if the context doesn't provide relevant information. Output will be displayed below in the format of question, answer, relevant files, and model used.
+In the side pannel to the left, click "Browse" to upload your files or drag and drop them into the "Browse" area. Accepted file types are txt, doc, docx, pdf, xlsx, csv, and pptx. Select all or any number of uploaded files. Click "Process Selected Files" to initiate processing. This will extract content, chunk it, and add embeddings to FAISS index. Enter your OpenAI API key to use GPT-4o-Mini for summarization and answering questions. Select files and click "Summarize Selected Files" or "Submit Question." "Summarize Selected Files" will summarize the following content in a concise manner, capturing the main points and key information. "Submit Question" will answer the question based on the given context, report exact numbers or percentages if they are present in the context, and indicate if the context doesn't provide relevant information. Output will be displayed below in the format of question, answer, relevant files, and model used.
 
 If a sensitive file with the keyword "admin" is processed, it will be saved in the sensitive_files.json and appear with the word SENSITIVE in red to denote sensitive data. To delete a file, select one or multiple files from the Uploaded files and click "Delete Selected Files." This will delete the file(s) from the FAISS vector database, FAISS index, and sensitive_files.json.
 
@@ -35,21 +35,19 @@ For usage instructions with the deployed application using Shiny, follow the pre
 
 **Attached is a screenshot of the application Homepage:**
 
-![Homepage](www/Shiny%20RAG%20App%20Homepage.png)
+![Homepage](www/Shiny%20RAG%20App%20-%20Homepage.png)
 
 **Attached is a screenshot of the summarization function:**
 
-![Summarization](www/Shiny%20Internal%20RAG%20Project%20-%20Summarization.png)
+![Summarization](www/Shiny%20RAG%20App%20-%20Summarization.png)
 
 **Attached is a screenshot of the submit question function:**
 
-![Submit Question](www/Shiny%20Internal%20RAG%20Project%20-%20Submit%20Question.png)
+![Submit Question](www/Shiny%20RAG%20App%20-%20Submit%20Question.png)
 
 ## Video
 
-Attached is a demo of the app in use, featuring functionality of "Summarize Selected Files", "Submit Question", and "Delete Files" buttons with corresponding output displayed in the "Output" text area:
-
-[Demo](https://drive.google.com/file/d/1sDZRD6lRGl12DdQxakLJdLplt-T9JYVs/view?usp=sharing)
+N/A
 
 ## Deployed Site
 
@@ -115,7 +113,7 @@ N/A
 
 ## Features
 
-python 3.12.4, Shiny, Unstructured Serverless API, FAISS vector database, Langchain, OpenAI ChatGPT 3.5-Turbo, sentence_transformers, pandas, numpy
+python 3.12.4, Shiny, Unstructured Serverless API, FAISS vector database, Langchain, OpenAI ChatGPT 4o-Mini, sentence_transformers, pandas, numpy
 
 ## Questions
 
