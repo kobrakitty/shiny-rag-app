@@ -3,9 +3,8 @@ from shiny import ui, render
 layout_about = ui.page_fluid(
   ui.tags.style("""
     html {
-      background: linear-gradient(345deg, #aa80ff, #c39ad7), no-repeat center center fixed;
-      background-size: cover;
-      height: 100%;
+      background: linear-gradient(345deg, #aa80ff, #c39ad7);
+      height: fit-content;
     } 
     body {
       background: transparent;
@@ -17,7 +16,9 @@ layout_about = ui.page_fluid(
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 20px;
-      margin: 445px 100px 0;
+      margin: 0 100px 0;
+      padding-top: 400px;
+      padding-bottom: 25px;
       justify-content: center;
     }
     .aboutDisplay {
