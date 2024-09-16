@@ -32,6 +32,9 @@ styles_app = ui.page_fluid(
             # overflow: hidden !important;
             height: fit-content; #makes sure the background image isn't cut off
         }
+        .main {
+               height: 100vh;   
+        }
         .main, .tab-pane {
             overflow: hidden !important;
         }
