@@ -447,3 +447,152 @@ Physics_Grade (int64)
 2024-09-09 13:30:10,460 - unstructured-client - INFO - Preparing to split document for partition.
 2024-09-09 13:30:10,460 - unstructured-client - INFO - Given file doesn't have '.pdf' extension, so splitting is not enabled.
 2024-09-09 13:30:10,460 - unstructured-client - INFO - Partitioning without split.
+2024-09-16 00:21:24,214 - unstructured-client - INFO - Preparing to split document for partition.
+2024-09-16 00:21:24,214 - unstructured-client - INFO - Given file doesn't have '.pdf' extension, so splitting is not enabled.
+2024-09-16 00:21:24,214 - unstructured-client - INFO - Partitioning without split.
+2024-09-16 00:22:57,567 - root - INFO - Processed file: DatabaseDesignFundamentals_06052024.pptx. Index size: 412, Chunk mapping size: 412, Sensitive: False
+2024-09-16 00:22:58,096 - unstructured-client - INFO - Preparing to split document for partition.
+2024-09-16 00:22:58,096 - unstructured-client - INFO - Given file doesn't have '.pdf' extension, so splitting is not enabled.
+2024-09-16 00:22:58,096 - unstructured-client - INFO - Partitioning without split.
+2024-09-16 00:22:59,745 - root - INFO - Processed file: sample-doc-files-sample2.doc. Index size: 2, Chunk mapping size: 2, Sensitive: False
+2024-09-16 00:23:14,343 - unstructured-client - INFO - Preparing to split document for partition.
+2024-09-16 00:23:14,343 - unstructured-client - INFO - Given file doesn't have '.pdf' extension, so splitting is not enabled.
+2024-09-16 00:23:14,343 - unstructured-client - INFO - Partitioning without split.
+2024-09-16 00:23:21,235 - root - INFO - Processed file: sample-docx-files-sample1.docx. Index size: 22, Chunk mapping size: 22, Sensitive: False
+2024-09-16 00:23:22,764 - unstructured-client - INFO - Preparing to split document for partition.
+2024-09-16 00:23:22,764 - unstructured-client - INFO - Given file doesn't have '.pdf' extension, so splitting is not enabled.
+2024-09-16 00:23:22,764 - unstructured-client - INFO - Partitioning without split.
+2024-09-16 00:23:42,009 - root - INFO - Processed file: sample-docx-files-sample2.docx. Index size: 83, Chunk mapping size: 83, Sensitive: False
+2024-09-16 00:23:42,569 - unstructured-client - INFO - Preparing to split document for partition.
+2024-09-16 00:23:42,569 - unstructured-client - INFO - Given file doesn't have '.pdf' extension, so splitting is not enabled.
+2024-09-16 00:23:42,569 - unstructured-client - INFO - Partitioning without split.
+2024-09-16 00:23:47,560 - root - INFO - Processed file: sample-docx-files-sample3.docx. Index size: 19, Chunk mapping size: 19, Sensitive: False
+2024-09-16 00:23:47,855 - unstructured-client - INFO - Preparing to split document for partition.
+2024-09-16 00:23:47,855 - unstructured-client - INFO - Given file doesn't have '.pdf' extension, so splitting is not enabled.
+2024-09-16 00:23:47,855 - unstructured-client - INFO - Partitioning without split.
+2024-09-16 00:23:48,139 - root - INFO - Processed file: Shiny RAG Project Required Packages.txt. Index size: 1, Chunk mapping size: 1, Sensitive: False
+2024-09-16 00:23:49,729 - root - INFO - DataFrame Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 50 entries, 0 to 49
+Columns: 116 entries, State to Graduate, Professional or Doctorate Degree
+dtypes: float64(33), int64(82), object(1)
+memory usage: 45.4+ KB
+
+2024-09-16 00:23:49,731 - root - INFO - Columns and their types:
+State (object)
+Total Population 2021 (int64)
+Population Growth or Decline 2010 to 2021 (float64)
+Households 2020 (int64)
+Labor Force (persons) Ann. Avg. 2021 (float64)
+Unemployment Rate Ann. Avg. 2021 (float64)
+Per Capita Personal Income 2021 (int64)
+Median Household Income 2020 (int64)
+Poverty Rate 2020 (float64)
+High School Diploma or More - Pct. of Adults 25+ 2020 (float64)
+Bachelor's Degree or More - Pct. of Adults 25+ 2020 (float64)
+Covered Employment 2021 (int64)
+Avg Wage per Job 2021 (int64)
+Manufacturing - Pct. All Jobs in County 2021 (float64)
+Manufacturing - Avg Wage per Job 2021 (int64)
+Transportation and Warehousing - Pct. All Jobs in County 2021 (float64)
+Transportation and Warehousing - Avg Wage per Job 2021 (int64)
+Health Care, Social Assist. - Pct. All Jobs in County 2021 (float64)
+Health Care, Social Assist. - Avg Wage per Job 2021 (int64)
+Finance and Insurance - Pct. All Jobs in County 2021 (float64)
+Finance and Insurance - Avg Wage per Job 2021 (int64)
+Population in 2021 (int64)
+Population in 2010 (int64)
+Population in 2000 (int64)
+Population in 1990 (int64)
+Population in 1980 (int64)
+Population change 2000 to 2010 (float64)
+Population change 1990 to 2010 (float64)
+Population change 1980 to 2010 (float64)
+Net Domestic Migration (int64)
+Net International Migration (int64)
+Natural Increase (births minus deaths) (int64)
+Births (int64)
+Deaths (int64)
+Preschool (0 to 4) (int64)
+School Age (5 to 17) (int64)
+College Age (18 to 24) (int64)
+Young Adult (25 to 44) (int64)
+Older Adult (45 to 64) (int64)
+Older (65 plus) (int64)
+Median Age (float64)
+American Ind. or Alaskan Native Alone (int64)
+Asian Alone (int64)
+Black Alone (int64)
+Native Hawaiian and Other Pac. Isl. Alone (int64)
+White Alone (int64)
+Two or More Race Groups (int64)
+Non-Hispanic or Latino (int64)
+Hispanic or Latino (int64)
+Puerto Rican (int64)
+Other (int64)
+White, Not Hispanic (reporting white alone) (int64)
+Hispanic (int64)
+Mexican (int64)
+Cuban (int64)
+Total Households (int64)
+Family Households (int64)
+Married with Children (int64)
+Married without Children (int64)
+Single Parents (int64)
+Other.1 (int64)
+Non-Family Households (int64)
+Living Alone (int64)
+Average Household Size (float64)
+Total Housing Units (ACS estimate) (int64)
+Occupied Units (int64)
+Owner Occupied (int64)
+Renter Occupied (int64)
+Vacant (int64)
+For Seasonal or Recreational Use (int64)
+Total Permits Filed (int64)
+Single Family Permits (int64)
+Two Family Permits (int64)
+Three and Four Family Permits (int64)
+Five Families and More Permits (int64)
+Median Household Income 2020.1 (int64)
+Median Household Income 2000 (int64)
+Percent Change 2000 to 2020 (float64)
+2021 (int64)
+2011 (int64)
+2001 (int64)
+1991 (int64)
+10-Year pct. Change (float64)
+20-Year pct. Change (float64)
+30-Year pct. Change (float64)
+Total Earnings by Place of Work (int64)
+Minus: Contributions for Government Social Insurance (int64)
+Personal Contributions for Government Social Insurance (int64)
+Employer Contributions for Government Social Insurance (int64)
+Plus: Adjustment for Residence (int64)
+Net Earnings by Place of Residence (int64)
+Plus: Dividends, Rent, Interest (int64)
+Plus: Transfer Payments (int64)
+Equals: Personal Income by Place of Residence (int64)
+Poverty Rate in 2020 (float64)
+Poverty Rate for Children under 18 in 2020 (float64)
+Total Labor Force (float64)
+Labor Force 5-Year Pct. Chg (float64)
+Labor Force 10-Year Pct. Chg (float64)
+Employed (float64)
+Employed 5-Year Pct. Chg (float64)
+Employed 10-Year Pct. Chg (float64)
+Unemployed (float64)
+Unemployed 5-Year Pct. Chg (float64)
+Unemployed 10-Year Pct. Chg (float64)
+Unemployment Rate (float64)
+Unemployment Rate 5-Year Pct. Chg (float64)
+Unemployment Rate 10-Year Pct. Chg (float64)
+Total Population 25 and Older (int64)
+Less than 9th Grade (int64)
+9th to 12th, No Diploma (int64)
+High School Graduate (includes equiv.) (int64)
+Some College, No Degree (int64)
+Associate Degree (int64)
+Bachelor's Degree (int64)
+Graduate, Professional or Doctorate Degree (int64)
+2024-09-16 00:23:58,942 - root - INFO - Processed file: US State Data Transformed.xlsx. Index size: 51, Chunk mapping size: 51, Sensitive: False

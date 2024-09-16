@@ -187,10 +187,6 @@ styles_app = ui.page_fluid(
             color: red;
             font-weight: bold;
         }
-        #download_chat {
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
         .instructions-output>h3 {
             font-weight: bold;
             font-size: 58px;
