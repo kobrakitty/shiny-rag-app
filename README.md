@@ -1,10 +1,10 @@
-# shiny-internal-rag-project
+# Shiny-RAG-App
 
 ![GitHub License](https://img.shields.io/badge/license-MIT-default.svg)
 
 ## Description
 
-Shiny Internal RAG Project is a RAG (retrieval-augmented generation) application that leverages AI technologies and provides innovation by seamlessly summarizing, retrieving, and performing key concept extraction on various LixCap documentation. This project was built to create a competitive advantage against industry peers, increase operational efficiency for the project management and research teams, and result in informed decision making across the company. It solves the problem of needing informed decision-making with AI-generated summaries and recommendations for fast retrieval, further reading, and related topics. Some things learned throughout this project were seeing the benefits of a low code UI layer like Shiny for seemlessly integrating AI models, Unstructured Serverless API effortlessly extracts and transforms complex data for use with every major vector database and LLM (Large Language Model) framework, understanding the importance of vector databases to store embeddings for easy retrieval, and LLMs can give vastly different contextual summaries and answers depending on the model, tokenization, and chunk-overlapping.
+Shiny RAG App is a RAG (retrieval-augmented generation) application that leverages AI technologies and provides innovation by seamlessly summarizing, retrieving, and performing key concept extraction on various file types. This project was built to create a competitive advantage against industry peers, increase operational efficiency for the project management and research teams, and result in informed decision making across companies. It solves the problem of needing informed decision-making with AI-generated summaries and recommendations for fast retrieval, further reading, and related topics. Some things learned throughout this project were seeing the benefits of a low code UI layer like Shiny for seemlessly integrating AI models, Unstructured Serverless API effortlessly extracts and transforms complex data for use with every major vector database and LLM (Large Language Model) framework, understanding the importance of vector databases to store embeddings for easy retrieval, and LLMs can give vastly different contextual summaries and answers depending on the model, tokenization, and chunk-overlapping.
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ Shiny Internal RAG Project is a RAG (retrieval-augmented generation) application
 
 ## Installation
 
-Within the main directory, install dependencies by running "pip install -r requirements.txt" within the terminal of the main directory. This will install all the necessary dependencies needed for Shiny, Unstructured, FAISS vector database, and OpenAI to run. Then, connect to the server with the command "shiny run app.py."
+To install and use this application, Python and Visual Studio Build Tools must be installed on the local machine. Within the main directory, install a virtual environment if is not already installed by running "pip install virtualenv" inside the terminal. Create a virtual environment with "virtualenv env." On Windows, activate the virtual environment with "env\Scripts\activate." On macOS/Linux, activate the virtual environment with "source env/bin/activate." Install dependencies by running "pip install -r requirements.txt" within the terminal of the main directory. This will install all the necessary dependencies needed for Shiny, Unstructured, FAISS vector database, and OpenAI to run. Then, connect to the server with the command "shiny run app.py."
 
 ## Usage
 
@@ -35,7 +35,7 @@ For usage instructions with the deployed application using Shiny, follow the pre
 
 **Attached is a screenshot of the application Homepage:**
 
-![Homepage](www/Shiny%20Internal%20RAG%20Project%20-%20Homepage.png)
+![Homepage](www/Shiny%20RAG%20App%20Homepage.png)
 
 **Attached is a screenshot of the summarization function:**
 
@@ -58,6 +58,8 @@ N/A
 ## Credits
 
 Collaborators: [Tyler Knapp](https://github.com/Tyler-KD), [Shelby Wentz](https://github.com/kobrakitty), [Josh Hill](https://github.com/JoshHill1)
+
+Refactored from: [shiny internal rag project](https://github.com/Tyler-KD/shiny-internal-rag-project)
 
 [Lonely Octopus](https://www.lonelyoctopus.com/)
 

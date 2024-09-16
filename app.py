@@ -218,13 +218,6 @@ def server(input, output, session):
     def github():
         return {"src": "www/github-mark.png", "style": "text-align: center; width: 35px; height: 35px;"}
     
-    @render.download(filename="chat_output.txt")
-    def download_chat():
-        def generate_content():
-            yield process_output_value()
-
-        return generate_content
-    
     @render.image  
     def background():
         return {"src": "www/cloud.png", "style": "width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: -101;"}

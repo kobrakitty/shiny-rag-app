@@ -46,7 +46,6 @@ layout_home = ui.page_fluid(
             ),
             ui.h3("Output:", class_="section-header"),
             ui.output_text_verbatim("process_output"),
-            ui.download_button("download_chat", "Download Chat", class_="btn-primary mt-2"),
         ),
         ui.output_text_verbatim("api_key_info"),
         ui.output_text_verbatim("progress_output"),
