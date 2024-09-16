@@ -182,8 +182,6 @@ async def summarize_document(content: str, openai_api_key: str, max_tokens: int 
 
 # Define the server logic for the Shiny app
 def server(input, output, session):
-    print("Home page loaded")  # Log for Home
-    print("About page loaded")  # Log for About
     file_list = reactive.Value([])
     processed_files_reactive = reactive.Value(set())
     sensitive_files = reactive.Value(load_sensitive_files())
@@ -485,7 +483,7 @@ def server(input, output, session):
 app_ui = ui.page_navbar(  
     ui.nav_panel("Home", layout_home),
     ui.nav_panel("About", ui.output_ui("about_content")),
-    title="RAG AI Internal Search Engine",
+    title="Shiny RAG App",
     id="page"
 )
 # Create and run the app
