@@ -45,6 +45,10 @@ For usage instructions with the deployed application using Shiny, follow the pre
 
 ![Submit Question](www/Shiny%20RAG%20App%20-%20Submit%20Question.png)
 
+**Attached is a screenshot of the application About page:**
+
+![About page](www/Shiny%20RAG%20App%20-%20About.png)
+
 ## Video
 
 N/A
